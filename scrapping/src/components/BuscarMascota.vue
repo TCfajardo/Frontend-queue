@@ -46,11 +46,15 @@ export default {
                     console.log('Datos enviados correctamente:', data);
                     console.log('Respuesta del servidor:', response.data);
                     alert(`Búsqueda realizada con éxito. Palabra clave: ${this.palabraClave}, Correo electrónico: ${this.correo}`);
+                    // Limpiar campos de entrada
+                    this.palabraClave = '';
+                    this.correo = '';
                 })
                 .catch(error => {
                     console.error('Error al realizar la búsqueda:', error);
                     alert(`Error al realizar la búsqueda: ${error.message}`);
                 });
+
         },
         revisarCola() {
             alert('Revisando la cola de búsquedas...');
